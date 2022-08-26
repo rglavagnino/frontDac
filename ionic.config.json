@@ -1,0 +1,7 @@
+{
+  "name": "visualc#",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
