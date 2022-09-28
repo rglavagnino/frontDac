@@ -1,0 +1,37 @@
+.vertical-center{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+  }
+
+.css-selector {
+    background: linear-gradient(310deg, #0e0073, #0c9c0c);
+    background-size: 600% 600%;
+
+    -webkit-animation: AnimationName 30s ease infinite;
+    -moz-animation: AnimationName 30s ease infinite;
+    -o-animation: AnimationName 30s ease infinite;
+    animation: AnimationName 30s ease infinite;
+}
+
+@-webkit-keyframes AnimationName {
+    0%{background-position:35% 0%}
+    50%{background-position:66% 100%}
+    100%{background-position:35% 0%}
+}
+@-moz-keyframes AnimationName {
+    0%{background-position:35% 0%}
+    50%{background-position:66% 100%}
+    100%{background-position:35% 0%}
+}
+@-o-keyframes AnimationName {
+    0%{background-position:35% 0%}
+    50%{background-position:66% 100%}
+    100%{background-position:35% 0%}
+}
+@keyframes AnimationName {
+    0%{background-position:35% 0%}
+    50%{background-position:66% 100%}
+    100%{background-position:35% 0%}
+}

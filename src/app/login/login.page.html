@@ -1,0 +1,69 @@
+<ion-content class="vertical-center atras">
+  <div>
+    <form #f="ngForm" (ngSubmit)="enSubmit(f)" class="background">
+      <ion-grid class="vertical-center">
+        <ion-row>
+          <ion-col>
+            <div style="color: white" class="vertical-center">
+              <ion-label style="font-size: 3em">Acceso DAC#</ion-label>
+            </div>
+
+            <div>
+              <div class="vertical-center">
+                <img width="218" src="../assets/img/hex2.png" />
+              </div>
+            </div>
+            <br />
+            <div style="color: white" class="vertical-center">
+              <ion-label>Permitenos saber quien eres </ion-label>
+              <br />
+            </div>
+            <ion-list class="ion-justify-content-center ion-item-border">
+              <ion-item>
+                <ion-label position="floating"> Usuario </ion-label>
+                <ion-input
+                  #usuarioCtrl="ngModel"
+                  ngModel
+                  name="iUsuario"
+                  required
+                ></ion-input>
+              </ion-item>
+              <ion-item
+                *ngIf="!usuarioCtrl.valid && usuarioCtrl.touched"
+                lines="none"
+              >
+                <ion-label>El campo de usuario es obligatorio</ion-label>
+              </ion-item>
+              <ion-item>
+                <ion-label position="floating">Contraseña</ion-label>
+                <ion-input
+                  #passCtrl="ngModel"
+                  type="password"
+                  ngModel
+                  name="ipass"
+                  required
+                ></ion-input>
+              </ion-item>
+              <ion-item
+                *ngIf="!passCtrl.valid && passCtrl.touched"
+                lines="none"
+              >
+                <ion-label>El campo de contraseña es obligatorio</ion-label>
+              </ion-item>
+            </ion-list>
+            <ion-button
+              type="submit"
+              color="danger"
+              expand="block"
+              [disabled]="!f.valid"
+              (click)="onClickIngreso"
+              >Inciar</ion-button
+            >
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </form>
+  </div>
+  <!-- <ion-spinner color = "primary" *ngIf="estaCargando"></ion-spinner> -->
+  <!-- <ion-button color="primary" (click) = "enLogin()" *ngIf="!estaCargando">Inciar sesion</ion-button> -->
+</ion-content>

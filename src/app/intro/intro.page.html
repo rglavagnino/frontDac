@@ -1,57 +1,29 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>Documentación DAC #</ion-title>
-  </ion-toolbar>
-</ion-header>
 
 <ion-content>
-  <div id="tm-sidebar" class="tm-sidebar"> 
-    <nav class="tm-nav">
-        <button class="navbar-toggler" type="button" aria-label="Toggle navigation">
-            <i class="fas fa-bars"></i>
-        </button>
-        <div>
-            <div class="tm-brand-box">
-                <h1 class="tm-brand">Navegación</h1>
-            </div>                
-            <ul id="tm-main-nav">
-                <li class="nav-item">                                
-                    <a href="#home" class="nav-link current">
-                        <div class="triangle-right"></div>
-                        <i class="fas fa-home nav-icon"></i>
-                        Inicio
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a href="#gallery" class="nav-link">
-                        <div class="triangle-right"></div>
-                        <i class="fas fa-images nav-icon"></i>
-                        Documentacion 
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a href="#about" class="nav-link">
-                        <div class="triangle-right"></div>
-                        <i class="fas fa-user-friends nav-icon"></i>
-                        About
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a href="#contact" class="nav-link">
-                        <div class="triangle-right"></div>
-                        <i class="fas fa-envelope nav-icon"></i>
-                        Contact
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a href="https://paypal.me/templatemo" class="nav-link external" target="_parent" rel="sponsored">
-                        <div class="triangle-right"></div>
-                        <i class="fas fa-external-link-alt nav-icon"></i>
-                        External
-                    </a>
-                </li>
-            </ul>
-        </div>      
-    </nav>
-</div>
+
+  <div class="vertical-center css-selector">
+    <div >
+      <div class="vertical-center">
+            <img width=325 src="../../assets/img/dac2.png">
+        </div>
+
+      <div class="ion-text-center">
+
+        <div style="color:white">
+          <h1>#DAC</h1>
+          <h3>DIRECCIÓN DE ANÁLISIS CRIMINAL<br>
+             DEPARTAMENTO DE TECNOLOGIA Y SEGURIDAD DE LA INFORMACIÓN <br>
+            
+            ROBERTO GUILLERMO LAVAGNINO RODRIGUEZ <br>
+            20070344
+          </h3>
+          <p>Ver. {{versionDelSistema}}</p>
+        </div>
+        <ion-button *ngIf="estaHabilitado" (click)=mostrarAuth()>Ingresar</ion-button>
+        <ion-label *ngIf="!estaHabilitado" color="danger">El sistema esta en manteniento, se espera en {{hastaCuandoHabilitado}}</ion-label>
+      </div>
+
+
+    </div>   
+  </div>
 </ion-content>

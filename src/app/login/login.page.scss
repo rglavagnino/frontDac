@@ -1,0 +1,48 @@
+.vertical-center{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+  }
+  .atras{
+    background: linear-gradient(310deg, #0e0073, #013a01);
+    background-size: 600% 600%;
+
+    -webkit-animation: AnimationName 30s ease infinite;
+    -moz-animation: AnimationName 30s ease infinite;
+    -o-animation: AnimationName 30s ease infinite;
+    animation: AnimationName 30s ease infinite;
+  }
+
+  .ion-item-border {
+    border-radius: 20px !important;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 5px;
+    padding-top: 5px;
+    }
+
+
+    ion-content {
+      // overwrite inline styles
+      --offset-bottom: auto!important;
+      --overflow: hidden;
+      overflow: auto;
+      &::-webkit-scrollbar {
+        display: none;
+      }
+    }
+
+
+    .container {
+      height: 1200px;
+      position: relative;
+    }
+    
+    .vertical-center-c {
+      margin: 0;
+      position: absolute;
+      top: 50%;
+      -ms-transform: translateY(-50%);
+      transform: translateY(-50%);
+    }
